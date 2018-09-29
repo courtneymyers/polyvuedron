@@ -15,6 +15,20 @@
         @anchor-clicked='toggleRightPanel()'
       />
     </header>
+
+    <main>
+      <section class='left-panel' v-if='leftPanelShown'>
+        <p>(Project and Block Libraries)</p>
+      </section>
+
+      <section class='middle-panel'>
+        <p>(Project Editor)</p>
+      </section>
+
+      <section class='right-panel' v-if='rightPanelShown'>
+        <p>(Project Preview)</p>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -26,14 +40,20 @@ export default {
   components: {
     BlockButton
   },
+  data() {
+    return {
+      leftPanelShown: true,
+      rightPanelShown: true,
+    };
+  },
   methods: {
     toggleLeftPanel() {
       event.preventDefault();
-      console.log('Library Panel toggled.')
+      this.leftPanelShown = !this.leftPanelShown;
     },
     toggleRightPanel() {
       event.preventDefault();
-      console.log('Preview Panel toggled.')
+      this.rightPanelShown = !this.rightPanelShown;
     },
   },
 }
@@ -70,5 +90,32 @@ export default {
   a:hover,
   a:focus {
     background-color: #60449a;
+  }
+
+  main {
+    display: flex;
+    border: 1px solid #ccbee4;
+    border-top: none;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .left-panel {
+    flex: 0 0 15rem;
+    border-right: 1px solid #ccbee4;
+    background-color: #e2ddef;
+  }
+
+  .middle-panel {
+    flex: 1;
+    background-color: #edeaf3;
+  }
+
+  .right-panel {
+    flex: 1;
+    border-left: 1px solid #ccbee4;
+    background-color: #e2ddef;
   }
 </style>
