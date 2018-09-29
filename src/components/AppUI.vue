@@ -18,15 +18,16 @@
 
     <main>
       <section class='left-panel' v-if='leftPanelShown'>
-        <p>(Project and Block Libraries)</p>
+        <h2>Project Library</h2>
+        <h2>Block Library</h2>
       </section>
 
       <section class='middle-panel'>
-        <p>(Project Editor)</p>
+        <h2>Project Editor</h2>
       </section>
 
       <section class='right-panel' v-if='rightPanelShown'>
-        <p>(Project Preview)</p>
+        <h2>Project Preview</h2>
       </section>
     </main>
   </div>
@@ -78,6 +79,17 @@ export default {
     font-weight: normal;
     text-align: center;
     color: #fff;
+  }
+
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccbee4;
+    font-size: 1.125rem;
+    color: #360a80;
+  }
+  h2:first-of-type {
+    margin-top: 0;
   }
 
   a {
