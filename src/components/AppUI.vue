@@ -5,14 +5,14 @@
         text='☰'
         href='#library'
         title='Toggle Library'
-        @anchor-clicked='toggleLeftPanel()'
+        @anchor-clicked='toggleLeftPanel'
       />
       <h1>Polyvuedron</h1>
       <block-button
         text='☰'
         href='#preview'
         title='Toggle Preview'
-        @anchor-clicked='toggleRightPanel()'
+        @anchor-clicked='toggleRightPanel'
       />
     </header>
 
@@ -92,15 +92,15 @@ export default {
     margin-top: 0;
   }
 
-  a {
+  .block-button {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 1.125rem;
     line-height: 1.5rem;
     background-color: #60449a;
   }
-  a:hover,
-  a:focus {
+  .block-button:hover,
+  .block-button:focus {
     background-color: #60449a;
   }
 
