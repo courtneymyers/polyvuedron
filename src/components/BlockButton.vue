@@ -1,5 +1,5 @@
 <template>
-  <a class='block-button' @click='$emit(`anchor-clicked`)'>{{ text }}</a>
+  <a class='button' @click='$emit(`anchor-clicked`)'>{{ text }}</a>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-.block-button {
+.button {
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -26,8 +26,8 @@ export default {
   text-decoration: none;
   user-select: none;
 }
-.block-button:hover,
-.block-button:focus {
+.button:hover,
+.button:focus {
   background-color: #360ccc;
 }
 </style>

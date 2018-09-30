@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <header>
+  <div class='container'>
+    <header class='header'>
       <block-button
+        class='block-button'
         text='☰'
         href='#library'
         title='Toggle Library'
         @anchor-clicked='toggleLeftPanel'
       />
-      <h1>Polyvuedron</h1>
+      <h1 class='heading'>Polyvuedron</h1>
       <block-button
+        class='block-button'
         text='☰'
         href='#preview'
         title='Toggle Preview'
@@ -16,18 +18,18 @@
       />
     </header>
 
-    <main>
-      <section class='left-panel' v-if='leftPanelShown'>
-        <h2>Project Library</h2>
-        <h2>Block Library</h2>
+    <main class='main'>
+      <section class='section left-panel' v-if='leftPanelShown'>
+        <h2 class='subheading'>Project Library</h2>
+        <h2 class='subheading'>Block Library</h2>
       </section>
 
-      <section class='middle-panel'>
-        <h2>Project Editor</h2>
+      <section class='section middle-panel'>
+        <h2 class='subheading'>Project Editor</h2>
       </section>
 
-      <section class='right-panel' v-if='rightPanelShown'>
-        <h2>Project Preview</h2>
+      <section class='section right-panel' v-if='rightPanelShown'>
+        <h2 class='subheading'>Project Preview</h2>
       </section>
     </main>
   </div>
@@ -61,18 +63,18 @@ export default {
 </script>
 
 <style scoped>
-  div {
+  .container {
     margin: 0 auto;
     max-width: 80rem;
   }
 
-  header {
+  .header {
     display: flex;
     padding: 1rem;
     background-color: #360a80;
   }
 
-  h1 {
+  .heading {
     flex: 1;
     margin: 0.1875rem 0.75rem 0;
     font-size: 1.3125rem;
@@ -81,14 +83,14 @@ export default {
     color: #fff;
   }
 
-  h2 {
+  .subheading {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccbee4;
     font-size: 1.125rem;
     color: #360a80;
   }
-  h2:first-of-type {
+  .subheading:first-of-type {
     margin-top: 0;
   }
 
@@ -104,13 +106,13 @@ export default {
     background-color: #60449a;
   }
 
-  main {
+  .main {
     display: flex;
     border: 1px solid #ccbee4;
     border-top: none;
   }
 
-  section {
+  .section {
     padding: 1rem;
   }
 
