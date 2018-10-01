@@ -1,35 +1,35 @@
 <template>
-  <div class='container'>
-    <header class='header'>
+  <div class="container">
+    <header class="header">
       <block-button
-        class='block-button'
-        text='☰'
-        href='#library'
-        title='Toggle Library'
-        @anchor-clicked='toggleLeftPanel'
+        class="block-button"
+        text="☰"
+        href="#library"
+        title="Toggle Library"
+        @anchor-clicked="toggleLeftPanel"
       />
-      <h1 class='heading'>Polyvuedron</h1>
+      <h1 class="heading">Polyvuedron</h1>
       <block-button
-        class='block-button'
-        text='☰'
-        href='#preview'
-        title='Toggle Preview'
-        @anchor-clicked='toggleRightPanel'
+        class="block-button"
+        text="☰"
+        href="#preview"
+        title="Toggle Preview"
+        @anchor-clicked="toggleRightPanel"
       />
     </header>
 
-    <main class='main'>
-      <section class='section left-panel' v-if='leftPanelShown'>
-        <h2 class='subheading'>Project Library</h2>
-        <h2 class='subheading'>Block Library</h2>
+    <main class="main">
+      <section class="section left-panel" v-if="leftPanelShown">
+        <h2 class="subheading">Project Library</h2>
+        <h2 class="subheading">Block Library</h2>
       </section>
 
-      <section class='section middle-panel'>
-        <h2 class='subheading'>Project Editor</h2>
+      <section class="section middle-panel">
+        <h2 class="subheading">Project Editor</h2>
       </section>
 
-      <section class='section right-panel' v-if='rightPanelShown'>
-        <h2 class='subheading'>Project Preview</h2>
+      <section class="section right-panel" v-if="rightPanelShown">
+        <h2 class="subheading">Project Preview</h2>
       </section>
     </main>
   </div>

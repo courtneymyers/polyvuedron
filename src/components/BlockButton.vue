@@ -1,5 +1,5 @@
 <template>
-  <a class='button' @click='$emit(`anchor-clicked`)'>{{ text }}</a>
+  <a class="button" @click="$emit('anchor-clicked')">{{ text }}</a>
 </template>
 
 <script>
