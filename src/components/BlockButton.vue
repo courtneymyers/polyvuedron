@@ -1,18 +1,12 @@
 <template>
-  <a class="button" @click="$emit('anchor-clicked')">{{ text }}</a>
+  <Button @click="$emit('button-clicked')">{{ text }}</Button>
 </template>
 
 <script>
-export default {
-  name: 'BlockButton',
-  props: {
-    text: String
-  },
-}
-</script>
+import styled from 'vue-styled-components';
 
-<style scoped>
-.button {
+// styled components
+const Button = styled.a`
   display: block;
   width: 1.25rem;
   height: 1.25rem;
@@ -25,9 +19,24 @@ export default {
   text-align: center;
   text-decoration: none;
   user-select: none;
+
+  :hover,
+  :focus {
+    background-color: #360ccc;
+  }
+`;
+
+export default {
+  name: 'BlockButton',
+  components: {
+    // styled components
+    Button,
+  },
+  props: {
+    text: String
+  },
 }
-.button:hover,
-.button:focus {
-  background-color: #360ccc;
-}
+</script>
+
+<style scoped>
 </style>
