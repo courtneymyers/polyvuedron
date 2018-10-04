@@ -1,20 +1,18 @@
 <template>
   <Container>
     <Header>
-      <block-button
-        class="block-button"
+      <ToggleButton
         text="☰"
         href="#library"
         title="Toggle Library"
-        @button-clicked="toggleLeftPanel"
+        @click="toggleLeftPanel"
       />
       <Heading>Polyvuedron</Heading>
-      <block-button
-        class="block-button"
+      <ToggleButton
         text="☰"
         href="#preview"
         title="Toggle Preview"
-        @button-clicked="toggleRightPanel"
+        @click="toggleRightPanel"
       />
     </Header>
 
@@ -49,6 +47,19 @@ const Header = styled.header`
   display: flex;
   padding: 1rem;
   background-color: #360a80;
+`;
+
+const ToggleButton = styled(BlockButton)`
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  background-color: #60449a;
+
+  :hover,
+  :focus {
+    background-color: #60449a;
+  }
 `;
 
 const Heading = styled.h1`
@@ -102,10 +113,10 @@ const RightPanel = Panel.extend`
 export default {
   name: 'AppUI',
   components: {
-    BlockButton,
     // styled components
     Container,
     Header,
+    ToggleButton,
     Heading,
     Main,
     Panel,
@@ -121,12 +132,12 @@ export default {
     };
   },
   methods: {
-    toggleLeftPanel() {
-      event.preventDefault();
+    toggleLeftPanel(ev) {
+      ev.preventDefault();
       this.leftPanelShown = !this.leftPanelShown;
     },
-    toggleRightPanel() {
-      event.preventDefault();
+    toggleRightPanel(ev) {
+      ev.preventDefault();
       this.rightPanelShown = !this.rightPanelShown;
     },
   },
@@ -134,15 +145,4 @@ export default {
 </script>
 
 <style scoped>
-  .block-button {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    background-color: #60449a;
-  }
-  .block-button:hover,
-  .block-button:focus {
-    background-color: #60449a;
-  }
 </style>
