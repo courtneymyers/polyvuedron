@@ -33,9 +33,9 @@ export default {
     Button,
   },
   props: {
-    text: String
+    text: String,
   },
-}
+};
 </script>
 
 <style scoped>
