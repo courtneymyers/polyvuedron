@@ -22,7 +22,7 @@
         <SubHeading>Block Library</SubHeading>
       </LeftPanel>
 
-      <MiddlePanel class="section middle-panel">
+      <MiddlePanel>
         <SubHeading>Project Editor</SubHeading>
       </MiddlePanel>
 
@@ -35,7 +35,7 @@
 
 <script>
 import styled from 'vue-styled-components';
-import BlockButton from './BlockButton.vue'
+import BlockButton from './BlockButton.vue';
 
 // styled components
 const Container = styled.div`
@@ -141,7 +141,7 @@ export default {
       this.rightPanelShown = !this.rightPanelShown;
     },
   },
-}
+};
 </script>
 
 <style scoped>

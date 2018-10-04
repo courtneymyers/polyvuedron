@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import AppUI from './components/AppUI.vue'
+import AppUI from './components/AppUI.vue';
 
 export default {
   name: 'app',
   components: {
-    AppUI
-  }
-}
+    AppUI,
+  },
+};
 </script>
 
 <style>
