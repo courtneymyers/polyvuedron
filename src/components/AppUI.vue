@@ -1,14 +1,18 @@
 <template>
-  <Container>
-    <Header>
+  <Container class="my-0 mx-auto max-w-3xl">
+    <Header class="flex p-4">
       <ToggleButton
+        class="w-6 h-6 text-lg"
         text="☰"
         href="#library"
         title="Toggle Library"
         @click.prevent="toggleLeftPanel"
       />
-      <Heading>Polyvuedron</Heading>
+      <Heading class="flex-1 font-normal text-center text-white">
+        Polyvuedron
+      </Heading>
       <ToggleButton
+        class="w-6 h-6 text-lg"
         text="☰"
         href="#preview"
         title="Toggle Preview"
@@ -16,18 +20,26 @@
       />
     </Header>
 
-    <Main>
-      <LeftPanel v-if="leftPanelShown">
-        <SubHeading>Project Library</SubHeading>
-        <SubHeading>Block Library</SubHeading>
+    <Main class="flex">
+      <LeftPanel v-if="leftPanelShown" class="p-4">
+        <SubHeading class="my-4 text-lg">
+          Project Library
+        </SubHeading>
+        <SubHeading class="my-4 text-lg">
+          Block Library
+        </SubHeading>
       </LeftPanel>
 
-      <MiddlePanel>
-        <SubHeading>Project Editor</SubHeading>
+      <MiddlePanel class="p-4 flex-1">
+        <SubHeading class="my-4 text-lg">
+          Project Editor
+        </SubHeading>
       </MiddlePanel>
 
-      <RightPanel v-if="rightPanelShown">
-        <SubHeading>Project Preview</SubHeading>
+      <RightPanel v-if="rightPanelShown" class="p-4 flex-1">
+        <SubHeading class="my-4 text-lg">
+          Project Preview
+        </SubHeading>
       </RightPanel>
     </Main>
   </Container>
@@ -39,20 +51,20 @@ import BlockButton from './BlockButton.vue';
 
 // styled components
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 80rem;
+  /* margin: 0 auto; */
+  /* max-width: 80rem; */
 `;
 
 const Header = styled.header`
-  display: flex;
-  padding: 1rem;
+  /* display: flex; */
+  /* padding: 1rem; */
   background-color: #360a80;
 `;
 
 const ToggleButton = styled(BlockButton)`
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1.125rem;
+  /* width: 1.5rem; */
+  /* height: 1.5rem; */
+  /* font-size: 1.125rem; */
   line-height: 1.5rem;
   background-color: #60449a;
 
@@ -63,29 +75,29 @@ const ToggleButton = styled(BlockButton)`
 `;
 
 const Heading = styled.h1`
-  flex: 1;
+  /* flex: 1; */
   margin: 0.1875rem 0.75rem 0;
   font-size: 1.3125rem;
-  font-weight: normal;
-  text-align: center;
-  color: #fff;
+  /* font-weight: normal; */
+  /* text-align: center; */
+  /* color: #fff; */
 `;
 
 const Main = styled.main`
-  display: flex;
+  /* display: flex; */
   border: 1px solid #ccbee4;
   border-top: none;
 `;
 
 const Panel = styled.section`
-  padding: 1rem;
+  /* padding: 1rem; */
 `;
 
 const SubHeading = styled.h2`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 1rem; */
   border-bottom: 1px solid #ccbee4;
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   color: #360a80;
 
   :first-of-type {
@@ -100,12 +112,12 @@ const LeftPanel = Panel.extend`
 `;
 
 const MiddlePanel = Panel.extend`
-  flex: 1;
+  /* flex: 1; */
   background-color: #edeaf3;
 `;
 
 const RightPanel = Panel.extend`
-  flex: 1;
+  /* flex: 1; */
   border-left: 1px solid #ccbee4;
   background-color: #e2ddef;
 `;
