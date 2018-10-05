@@ -5,14 +5,14 @@
         text="☰"
         href="#library"
         title="Toggle Library"
-        @click="toggleLeftPanel"
+        @click.prevent="toggleLeftPanel"
       />
       <Heading>Polyvuedron</Heading>
       <ToggleButton
         text="☰"
         href="#preview"
         title="Toggle Preview"
-        @click="toggleRightPanel"
+        @click.prevent="toggleRightPanel"
       />
     </Header>
 
@@ -132,12 +132,10 @@ export default {
     };
   },
   methods: {
-    toggleLeftPanel(ev) {
-      ev.preventDefault();
+    toggleLeftPanel() {
       this.leftPanelShown = !this.leftPanelShown;
     },
-    toggleRightPanel(ev) {
-      ev.preventDefault();
+    toggleRightPanel() {
       this.rightPanelShown = !this.rightPanelShown;
     },
   },
