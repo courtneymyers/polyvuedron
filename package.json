@@ -48,7 +48,8 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "tailwindcss": "./tailwind.js"
     }
   },
   "browserslist": [
