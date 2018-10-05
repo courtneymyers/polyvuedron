@@ -18,6 +18,7 @@
     "husky": "1.1.0",
     "lint-staged": "7.3.0",
     "prettier": "1.14.3",
+    "tailwindcss": "0.6.6",
     "vue-template-compiler": "^2.5.17"
   },
   "husky": {
@@ -47,7 +48,8 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "tailwindcss": "./tailwind.js"
     }
   },
   "browserslist": [
